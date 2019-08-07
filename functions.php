@@ -83,7 +83,12 @@
       return "acf/{$block['name']}";
     }, $BLOCKS);
 
-    return array_merge($acf_blocks, []);
+    $allowed_core_blocks = [
+      'core/heading',
+      'core/paragraph'
+    ];
+
+    return array_merge($acf_blocks, $allowed_core_blocks);
   }
 
   function register_post_types() {
@@ -147,11 +152,26 @@
     );
   }
 
+  function overwrite_core_blocks() {
+    register_block_type('core/paragraph', array(
+      'render_callback' => function($attributes, $content) {
+        return '<div class="constraint">' . $content . '</div>';
+      },
+    ));
+
+    register_block_type('core/heading', array(
+      'render_callback' => function($attributes, $content) {
+        return '<div class="constraint">' . $content . '</div>';
+      },
+    ));
+  }
+
   add_theme_support('post-thumbnails');
 
   add_action('init', 'register_post_types');
   add_action('init', 'register_menus');
   add_action('admin_menu','cleanup_admin');
   add_action('acf/init', 'acf_init_blocks');
+  add_action('init', 'overwrite_core_blocks');
   add_filter('allowed_block_types', 'allowed_block_types');
 ?>
