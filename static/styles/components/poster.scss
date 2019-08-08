@@ -1,0 +1,11 @@
+.poster {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+
+  > .figure + .figure {
+    margin-left: 3.5rem;
+    margin-top: 7.5rem;
+  }
+}

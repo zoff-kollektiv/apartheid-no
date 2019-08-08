@@ -1,0 +1,55 @@
+.figure {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+
+  &--is-reversed {
+    flex-direction: row-reverse;
+  }
+
+  &--is-columnized {
+    display: table;
+  }
+
+  > img {
+    flex: 1 0 auto;
+    height: auto;
+    margin-right: 1.5rem;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  &--is-reversed > img {
+    margin-left: 1.5rem;
+    margin-right: 0;
+  }
+
+  &--is-columnized > img {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+
+  &--is-columnized &__caption-container {
+    display: table-caption;
+    caption-side: bottom;
+  }
+
+  &__title {
+    font-family: $font-value-family;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-family: $font-value-family;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &__caption {
+    font-family: $font-value-family;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
