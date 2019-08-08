@@ -175,8 +175,13 @@
     ));
   }
 
-  add_theme_support('post-thumbnails');
+  function admin_setup_editor_styles() {
+    add_theme_support('editor-styles');
+    add_editor_style('./dist/index.css');
+  }
 
+  add_theme_support('post-thumbnails');
+  add_action('after_setup_theme', 'admin_setup_editor_styles');
   add_action('init', 'register_post_types');
   add_action('init', 'register_menus');
   add_action('admin_menu','cleanup_admin');

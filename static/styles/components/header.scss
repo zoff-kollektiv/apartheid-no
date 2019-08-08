@@ -4,4 +4,10 @@
   background-color: $color-blue;
   color: white;
   padding: 1rem;
+
+  > .constraint {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }
