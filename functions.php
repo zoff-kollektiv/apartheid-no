@@ -69,7 +69,7 @@
   function acf_init_blocks() {
     global $BLOCKS;
 
-    if( function_exists('acf_register_block_type') ) {
+    if(function_exists('acf_register_block_type')) {
       foreach($BLOCKS as $block) {
         acf_register_block_type($block);
       }
