@@ -131,8 +131,8 @@
           'menu_icon' => 'dashicons-media-text',
           'supports' => array(
             'title',
+            'excerpt',
             'editor',
-            'thumbnail',
             'revisions',
           )
       )

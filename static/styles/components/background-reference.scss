@@ -1,0 +1,31 @@
+.background-reference {
+  @include center-items-horizontally;
+
+  border-bottom: 0.3rem dashed $color-green;
+  border-top: 0.3rem dashed $color-green;
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+  width: 100%;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-value-family;
+  }
+
+  &__link {
+    color: $color-blue;
+    font-family: $font-value-family;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      color: $color-green;
+    }
+  }
+}
