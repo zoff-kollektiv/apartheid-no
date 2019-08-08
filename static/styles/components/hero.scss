@@ -1,13 +1,24 @@
 .hero {
   @include center-items-horizontally;
 
+  background-color: $color-red;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 9rem);
+  width: 100%;
 
   &__title {
+    color: white;
     font-family: $font-din-family;
     font-size: 12rem;
     font-weight: 700;
     line-height: 1;
+  }
+
+  &__chapter {
+    display: block;
+    font-family: $font-value-family;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 2rem;
   }
 }

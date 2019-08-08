@@ -105,6 +105,7 @@
           ),
           'show_in_rest' => true,
           'menu_icon' => 'dashicons-media-document',
+          'show_in_nav_menus' => true,
           'supports' => array(
             'title',
             'excerpt',
