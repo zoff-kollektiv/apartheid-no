@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin: 0;
+  max-width: 100%;
 
   &--is-reversed {
     flex-direction: row-reverse;
@@ -11,27 +12,32 @@
     display: table;
   }
 
-  > img {
-    flex: 1 0 auto;
-    height: auto;
-    margin-right: 1.5rem;
-    max-width: 100%;
-    object-fit: contain;
-  }
-
-  &--is-reversed > img {
-    margin-left: 1.5rem;
-    margin-right: 0;
-  }
-
-  &--is-columnized > img {
-    margin-bottom: 1.5rem;
-    margin-right: 0;
+  &__caption-container {
+    max-width: 25%;
   }
 
   &--is-columnized &__caption-container {
     display: table-caption;
     caption-side: bottom;
+    max-width: none;
+  }
+
+  > img {
+    flex-grow: 1;
+    height: auto;
+    margin-right: 2.5rem;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  &--is-reversed > img {
+    margin-left: 2.5rem;
+    margin-right: 0;
+  }
+
+  &--is-columnized > img {
+    margin-bottom: 2.5rem;
+    margin-right: 0;
   }
 
   &__title {
@@ -39,6 +45,7 @@
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.2;
+    word-break: break-all;
   }
 
   &__description {

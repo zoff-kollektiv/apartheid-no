@@ -1,4 +1,8 @@
 .constraint {
   max-width: 83.3rem;
   width: 100%;
+
+  &--wide {
+    max-width: 100rem;
+  }
 }
