@@ -13,7 +13,7 @@ const CONFIG = {
       files: [
         './static/fonts/**/*'
       ],
-      dest: './dist/',
+      dest: './dist/fonts/',
       options: {
         verbose: true
       }

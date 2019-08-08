@@ -1,0 +1,10 @@
+@mixin center-items-horizontally($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $direction == column {
+    align-items: center;
+  } @else {
+    justify-items: center;
+  }
+}

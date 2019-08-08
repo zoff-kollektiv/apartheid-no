@@ -1,0 +1,7 @@
+.header {
+  @include center-items-horizontally;
+
+  background-color: $color-blue;
+  color: white;
+  padding: 1rem;
+}

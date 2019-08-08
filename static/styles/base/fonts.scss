@@ -1,0 +1,87 @@
+$font-path: '/wp-content/themes/apartheid-no/dist/fonts';
+
+// DIN Next Stencil
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 900;
+  src: url($font-path + '/DINNextStencil-Black.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Black.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 800;
+  src: url($font-path + '/DINNextStencil-Heavy.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 700;
+  src: url($font-path + '/DINNextStencil-Bold.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 500;
+  src: url($font-path + '/DINNextStencil-Medium.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 400;
+  src: url($font-path + '/DINNextStencil-Regular.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 300;
+  src: url($font-path + '/DINNextStencil-Light.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-Light.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DIN Next Stencil';
+  font-weight: 200;
+  src: url($font-path + '/DINNextStencil-UltraLight.woff2') format('woff2'),
+       url($font-path + '/DINNextStencil-UltraLight.woff') format('woff');
+}
+
+
+// Value Sans
+
+@font-face {
+  font-display: swap;
+  font-family: 'Value Sans';
+  font-weight: 700;
+  src: url($font-path + '/value-sans-bold.woff2') format('woff2'),
+       url($font-path + '/value-sans-bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Value Sans';
+  font-weight: 400;
+  src: url($font-path + '/value-sans-regular.woff2') format('woff2'),
+       url($font-path + '/value-sans-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Value Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url($font-path + '/value-sans-italic.woff2') format('woff2'),
+       url($font-path + '/value-sans-italic.woff') format('woff');
+}

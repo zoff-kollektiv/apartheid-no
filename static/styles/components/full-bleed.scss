@@ -1,0 +1,12 @@
+.full-bleed {
+  @include center-items-horizontally;
+
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+  width: 100%;
+
+  &--fill-blue {
+    background-color: $color-blue;
+    color: white;
+  }
+}

@@ -1,0 +1,8 @@
+.footer {
+  @include center-items-horizontally;
+
+  background-color: $color-blue;
+  color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}

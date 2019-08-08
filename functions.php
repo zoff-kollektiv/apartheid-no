@@ -155,13 +155,21 @@
   function overwrite_core_blocks() {
     register_block_type('core/paragraph', array(
       'render_callback' => function($attributes, $content) {
-        return '<div class="constraint">' . $content . '</div>';
+        return '<div class="constraint">
+          <div class="paragraph">'
+            . $content .
+          '</div>
+        </div>';
       },
     ));
 
     register_block_type('core/heading', array(
       'render_callback' => function($attributes, $content) {
-        return '<div class="constraint">' . $content . '</div>';
+        return '<div class="constraint">
+          <div class="heading">'
+            . $content .
+          '</div>
+        </div>';
       },
     ));
   }
