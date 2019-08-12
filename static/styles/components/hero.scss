@@ -23,11 +23,16 @@
   &__title {
     color: white;
     font-family: $font-din-family;
-    font-size: 12rem;
+    font-size: 6rem;
     font-weight: 700;
+    hyphens: auto;
     line-height: 1;
     position: relative;
     z-index: 2;
+
+    @include mq($from: tablet) {
+      font-size: 12rem;
+    }
   }
 
   &__chapter {

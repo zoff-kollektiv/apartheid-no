@@ -1,11 +1,19 @@
 .poster {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
 
+  @include mq($from: tablet) {
+    flex-direction: row;
+  }
+
   > .figure + .figure {
-    margin-left: 3.5rem;
-    margin-top: 7.5rem;
+    margin-top: 3.5rem;
+
+    @include mq($from: tablet) {
+      margin-left: 3.5rem;
+      margin-top: 7.5rem;
+    }
   }
 }

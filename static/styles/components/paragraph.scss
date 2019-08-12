@@ -1,7 +1,11 @@
 .paragraph {
   color: $color-blue;
   font-family: $font-value-family;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.5;
+
+  @include mq($from: tablet) {
+    font-size: 2rem;
+  }
 }

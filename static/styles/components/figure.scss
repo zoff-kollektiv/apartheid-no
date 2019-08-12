@@ -1,11 +1,17 @@
 .figure {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0;
   max-width: 100%;
 
+  @include mq($from: tablet) {
+    flex-direction: row;
+  }
+
   &--is-reversed {
-    flex-direction: row-reverse;
+    @include mq($from: tablet) {
+      flex-direction: row-reverse;
+    }
   }
 
   &--is-columnized {
@@ -13,7 +19,9 @@
   }
 
   &__caption-container {
-    max-width: 25%;
+    @include mq($from: tablet) {
+      max-width: 25%;
+    }
 
     > * + * {
       margin-top: 1.5rem;
@@ -29,14 +37,22 @@
   > img {
     flex-grow: 1;
     height: auto;
-    margin-right: 2.5rem;
+    margin-bottom: 1.5rem;
     max-width: 100%;
     object-fit: contain;
+
+    @include mq($from: tablet) {
+      margin-bottom: 0;
+      margin-right: 2.5rem;
+    }
   }
 
   &--is-reversed > img {
-    margin-left: 2.5rem;
     margin-right: 0;
+
+    @include mq($from: tablet) {
+      margin-left: 2.5rem;
+    }
   }
 
   &--is-columnized > img {
@@ -46,17 +62,25 @@
 
   &__title {
     font-family: $font-value-family;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     word-break: break-all;
+
+    @include mq($from: tablet) {
+      font-size: 2.4rem;
+    }
   }
 
   &__description {
     font-family: $font-value-family;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 0;
+
+    @include mq($from: tablet) {
+      font-size: 1.6rem;
+    }
   }
 
   &__caption {
