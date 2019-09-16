@@ -21,10 +21,10 @@ jobs:
 
     - uses: actions/checkout@master
     - name: FTP-Deploy
-      uses: SamKirkland/FTP-Deploy-Action@master
+      uses: gustavpursche/FTP-Deploy-Action@master
       env:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        REMOTE_DIR: /wordpress/wp-content/themes/apartheid-no/
+        REMOTE_DIR: /test/wp-content/themes/apartheid-no/
         ARGS: --delete
