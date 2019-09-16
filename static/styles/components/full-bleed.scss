@@ -20,6 +20,16 @@
     color: white;
   }
 
+  &--fill-yellow {
+    background-color: $color-yellow;
+    color: $color-blue;
+  }
+
+  &--fill-green {
+    background-color: $color-green;
+    color: $color-blue;
+  }
+
   &--with-margin {
     margin-bottom: 5rem;
     margin-top: 5rem;
