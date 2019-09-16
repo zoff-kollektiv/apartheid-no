@@ -69,6 +69,20 @@ $BLOCKS = [
         'supports' => array(
             'align' => false
         )
+    ],
+
+    [
+        'name' => 'explainer',
+        'title' => __('Explainer'),
+        'render_callback' => 'acf_block_render_callback',
+        'category' => 'common',
+        'icon' => 'sort',
+        'keywords' => array('explainer'),
+        'post_types' => array('chapters', 'background'),
+        'mode' => 'auto',
+        'supports' => array(
+            'align' => false
+        )
     ]
 ];
 
