@@ -13,6 +13,11 @@
     text-decoration: none;
   }
 
+  &__navigation-container {
+    display: flex;
+    flex-direction: row;
+  }
+
   > .constraint {
     align-items: center;
     display: flex;

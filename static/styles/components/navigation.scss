@@ -13,6 +13,10 @@
     background-color: $color-red;
   }
 
+  &--theme-background[open] {
+    background-color: $color-green;
+  }
+
   &__summary {
     @include link();
 
@@ -23,8 +27,6 @@
   }
 
   &__menu {
-    background-color: $color-red;
-    left: 0;
     list-style: none;
     margin-bottom: 0;
     margin-top: 0;
@@ -50,6 +52,16 @@
         color: $color-blue;
       }
     }
+  }
+
+  &--theme-chapters &__menu {
+    background-color: $color-red;
+    left: 0;
+  }
+
+  &--theme-background &__menu {
+    background-color: $color-green;
+    right: 0;
   }
 
   &__summary,

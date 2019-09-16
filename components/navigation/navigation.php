@@ -1,4 +1,4 @@
-<details class="navigation">
+<details class="navigation navigation--theme-<?php echo $type; ?>">
   <summary class="navigation__summary">
     <?php echo $title; ?>
   </summary>
