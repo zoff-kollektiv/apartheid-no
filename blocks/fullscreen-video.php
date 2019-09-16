@@ -1,7 +1,13 @@
 <?php
 $title = get_field('title');
-$url = get_field('youtube_url');
-?>
+$caption = get_field('caption');
+$description = get_field('description');
 
-<strong><?php echo $title; ?></strong>
-<?php echo $url; ?>
+get_component('video/video', [
+    'image_id' => get_field('preview_image'),
+    'quote' => get_field('quote'),
+    'length' => get_field('length'),
+    'url' => get_field('youtube_url')
+]);
+
+?>

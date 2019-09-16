@@ -44,6 +44,47 @@ $media_count = 1;
       <?php
           endif;
 
+          if (get_row_layout() == 'video'): ?>
+
+      <figure class="figure <?php if ($media_count % 2 == 0):
+          echo 'figure--is-reversed';
+      endif; ?>">
+          <?php
+          $video_title = get_sub_field('title');
+          $video_description = get_sub_field('description');
+          $video_caption = get_sub_field('caption');
+
+          get_component('video/video', [
+              'image_id' => get_sub_field('preview_image'),
+              'quote' => get_sub_field('quote'),
+              'length' => get_sub_field('length'),
+              'url' => get_sub_field('youtube_url')
+          ]);
+          ?>
+
+          <figcaption class="figure__caption-container">
+            <?php if ($video_title): ?>
+              <strong class="figure__title">
+                <?php echo $video_title; ?>
+              </strong>
+            <?php endif; ?>
+
+            <?php if ($video_description): ?>
+              <div class="figure__description">
+                <?php echo $video_description; ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if ($video_caption): ?>
+              <small class="figure__caption">
+                <?php echo $video_caption; ?>
+              </small>
+            <?php endif; ?>
+          </figcaption>
+      </figure>
+
+      <?php endif;
+
           $media_count++;
       endwhile; ?>
     </div>
