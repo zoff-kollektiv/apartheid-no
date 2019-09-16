@@ -19,11 +19,14 @@ jobs:
         ARGS: --delete
 
   build:
+    name: Build assets
+    steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
         version: 12
+
     - name: npm install, build
       run: |
         npm install
