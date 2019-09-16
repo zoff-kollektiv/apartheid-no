@@ -19,14 +19,11 @@ jobs:
         npm install
         npm run build --if-present
 
-    - name: List output files
-      run: ls
-
     - name: FTP-Deploy
       uses: gustavpursche/FTP-Deploy-Action@master
       env:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        REMOTE_DIR: /test/wp-content/themes/apartheid-no/
+        REMOTE_DIR: /wp-content/themes/apartheid-no/
         ARGS: --delete --exclude=node_modules/ --exclude=.git/
