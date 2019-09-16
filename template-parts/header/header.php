@@ -9,10 +9,5 @@
         )
       );
     ?>
-
-    <button type="button" class="burger">
-      <span class="burger__icon"></span>
-      <span class="burger__label">Menu</span>
-    </button>
   </div>
 </header>
