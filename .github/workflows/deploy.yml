@@ -19,6 +19,9 @@ jobs:
         npm install
         npm run build --if-present
 
+    - name: List output files
+      run: ls
+
     - uses: actions/checkout@master
     - name: FTP-Deploy
       uses: gustavpursche/FTP-Deploy-Action@master
