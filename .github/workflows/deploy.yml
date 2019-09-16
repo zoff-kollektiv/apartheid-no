@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+name: Deploy Website
+jobs:
+  ftp-deploy:
+    name: FTP-Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_SERVER: ${{ secrets.FTP_HOST }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        REMOTE_DIR: /wordpress/wp-content/themes/apartheid-no/
+        ARGS: --delete
+
+  build:
+    name: Build assets
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        version: 12
+
+    - name: npm install, build
+      run: |
+        npm install
+        npm run build
