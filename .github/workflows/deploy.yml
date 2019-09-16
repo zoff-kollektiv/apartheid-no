@@ -26,4 +26,4 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR: /wp-content/themes/apartheid-no/
-        ARGS: --delete --exclude=node_modules/ --exclude=.git/
+        ARGS: --delete --exclude=node_modules/ --exclude=.git/ --exclude=.Icon
