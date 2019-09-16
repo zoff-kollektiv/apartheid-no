@@ -22,7 +22,6 @@ jobs:
     - name: List output files
       run: ls
 
-    - uses: actions/checkout@master
     - name: FTP-Deploy
       uses: gustavpursche/FTP-Deploy-Action@master
       env:
@@ -30,4 +29,4 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         REMOTE_DIR: /test/wp-content/themes/apartheid-no/
-        ARGS: --delete
+        ARGS: --delete --exclude=node_modules/ --exclude=.git/
