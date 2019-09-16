@@ -1,7 +1,8 @@
-on: push
+on:
+  push:
+    branches:
+      - master
 name: Deploy Website
-branches:
-  - master
 jobs:
   ftp-deploy:
     name: FTP-Deploy
