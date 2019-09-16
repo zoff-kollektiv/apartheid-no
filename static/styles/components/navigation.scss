@@ -1,0 +1,60 @@
+.navigation {
+  position: relative;
+  z-index: 10;
+
+  @mixin link() {
+    font-family: $font-value-family;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &[open] {
+    background-color: $color-red;
+  }
+
+  &__summary {
+    @include link();
+
+    display: block;
+    padding-bottom: 3.25rem;
+    padding-top: 3.25rem;
+    user-select: none;
+  }
+
+  &__menu {
+    background-color: $color-red;
+    left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-width: 100%;
+    padding-bottom: 2.5rem;
+    padding-left: 0;
+    padding-top: 2.5rem;
+    position: absolute;
+    top: 100%;
+
+    a {
+      @include link();
+
+      color: currentColor;
+      display: block;
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__summary,
+  &__menu {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}

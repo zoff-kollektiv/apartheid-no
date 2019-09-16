@@ -175,6 +175,12 @@
     ));
   }
 
+  function get_component($path, array $params = [])
+{
+    extract($params, EXTR_SKIP);
+    require get_template_directory() . '/components/' . $path . '.php';
+}
+
   add_theme_support('post-thumbnails');
   add_action('init', 'register_post_types');
   add_action('init', 'register_menus');
