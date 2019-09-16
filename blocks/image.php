@@ -1,11 +1,11 @@
 <div class="constraint">
   <figure class="figure">
     <?php
-      $image = get_field('image');
+    $image = get_field('image');
 
-      echo wp_get_attachment_image($image['ID'], 'full', [
+    echo wp_get_attachment_image($image['ID'], 'full', [
         'class' => 'figure__image'
-      ]);
+    ]);
     ?>
 
     <figcaption class="figure__caption-container">

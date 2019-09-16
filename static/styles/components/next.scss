@@ -1,0 +1,24 @@
+.next {
+  color: $color-blue;
+  margin-top: 6rem;
+
+  &__link-label {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  &__link {
+    color: currentColor;
+    font-family: $font-din-family;
+    font-size: 7.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+
+    &::after {
+      content: '▸';
+      margin-left: 1.5rem;
+    }
+  }
+}
