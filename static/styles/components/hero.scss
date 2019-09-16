@@ -35,11 +35,25 @@
     }
   }
 
+  &--is-centered &__title {
+    text-align: center;
+  }
+
+  &__chapter-subline,
   &__chapter {
     display: block;
     font-family: $font-value-family;
     font-size: 2.4rem;
     line-height: 1;
+  }
+
+  &__chapter-subline {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+
+  &__chapter {
     margin-bottom: 2rem;
+    margin-top: 0;
   }
 }
