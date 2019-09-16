@@ -1,7 +1,7 @@
 <?php
-  $background_id = get_field('background_page');
+$background_id = get_field('background_page');
 
-  $link = get_permalink($background_id);
+$link = get_permalink($background_id);
 ?>
 
 <div class="full-bleed">

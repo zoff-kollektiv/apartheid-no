@@ -1,5 +1,7 @@
 <section class="hero">
-  <?php echo get_the_post_thumbnail(null, 'post-thumbnail', [ 'class' => 'hero__image' ]); ?>
+  <?php echo get_the_post_thumbnail(null, 'post-thumbnail', [
+      'class' => 'hero__image'
+  ]); ?>
 
   <div class="constraint">
     <h1 class="hero__title">
