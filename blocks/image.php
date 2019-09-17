@@ -1,12 +1,11 @@
+<?php
+$image = get_field('image'); ?>
+
 <div class="constraint">
   <figure class="figure">
-    <?php
-    $image = get_field('image');
-
-    echo wp_get_attachment_image($image['ID'], 'image', [
-        'class' => 'figure__image'
-    ]);
-    ?>
+    <?php echo wp_get_attachment_image($image['ID'], 'image', [
+        'class' => 'figure__media'
+    ]); ?>
 
     <figcaption class="figure__caption-container">
       <?php if ($image['title']): ?>
