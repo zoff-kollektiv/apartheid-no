@@ -25,7 +25,11 @@
     }
 
     > * + * {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+
+      @include mq($from: tablet) {
+        margin-top: 1.5rem;
+      }
     }
   }
 
@@ -39,7 +43,7 @@
   &__media {
     flex-grow: 1;
     height: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     max-width: 100%;
     object-fit: contain;
 
@@ -61,13 +65,17 @@
 
   &--is-columnized > .video,
   &--is-columnized > &__media {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     margin-right: 0;
+
+    @include mq($from: tablet) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__title {
     font-family: $font-value-family;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.2;
     word-break: break-all;
@@ -79,7 +87,7 @@
 
   &__description {
     font-family: $font-value-family;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     margin-bottom: 0;
 
@@ -91,7 +99,11 @@
   &__caption {
     display: block;
     font-family: $font-value-family;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.5;
+
+    @include mq($from: tablet) {
+      font-size: 1.4rem;
+    }
   }
 }
