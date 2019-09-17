@@ -1,13 +1,19 @@
 .full-bleed {
   @include center-items-horizontally;
 
-  padding-bottom: 2rem;
-  padding-top: 2rem;
   width: 100%;
 
-  @include mq($from: tablet) {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+  &--fill-blue,
+  &--fill-red,
+  &--fill-yellow,
+  &--fill-green {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    @include mq($from: tablet) {
+      padding-bottom: 5rem;
+      padding-top: 5rem;
+    }
   }
 
   &--fill-blue {
@@ -47,6 +53,14 @@
     @include mq($from: tablet) {
       margin-bottom: 5rem;
       margin-top: 0;
+    }
+  }
+
+  &--collapse-margin-top {
+    margin-top: -2rem;
+
+    @include mq($from: tablet) {
+      margin-top: -5rem;
     }
   }
 }
