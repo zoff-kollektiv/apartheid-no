@@ -1,5 +1,9 @@
 .media {
   > * + * {
-    margin-top: 5rem;
+    margin-top: 3rem;
+
+    @include mq($from: tablet) {
+      margin-top: 5rem;
+    }
   }
 }

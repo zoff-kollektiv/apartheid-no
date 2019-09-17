@@ -3,10 +3,14 @@
 
   background-color: $color-red;
   justify-content: center;
-  height: calc(100vh - 9rem);
+  height: 55vh;
   overflow: hidden;
   position: relative;
   width: 100%;
+
+  @include mq($from: tablet) {
+    height: calc(100vh - 9rem);
+  }
 
   &__image {
     left: 50%;
@@ -23,7 +27,7 @@
   &__title {
     color: white;
     font-family: $font-din-family;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 700;
     hyphens: auto;
     line-height: 1;
@@ -43,8 +47,12 @@
   &__chapter {
     display: block;
     font-family: $font-value-family;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     line-height: 1;
+
+    @include mq($from: tablet) {
+      font-size: 2.4rem;
+    }
   }
 
   &__chapter-subline {

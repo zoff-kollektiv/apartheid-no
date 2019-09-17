@@ -40,12 +40,13 @@
     flex-grow: 1;
     height: auto;
     margin-bottom: 1.5rem;
-    max-width: 75%;
+    max-width: 100%;
     object-fit: contain;
 
     @include mq($from: tablet) {
       margin-bottom: 0;
       margin-right: 2.5rem;
+      max-width: 75%;
     }
   }
 

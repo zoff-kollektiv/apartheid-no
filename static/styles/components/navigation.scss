@@ -4,9 +4,13 @@
 
   @mixin link() {
     font-family: $font-value-family;
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1;
+
+    @include mq($from: tablet) {
+      font-size: 2.4rem;
+    }
   }
 
   &[open] {
@@ -21,9 +25,14 @@
     @include link();
 
     display: block;
-    padding-bottom: 3.25rem;
-    padding-top: 3.25rem;
+    padding-bottom: 2.25rem;
+    padding-top: 2.25rem;
     user-select: none;
+
+    @include mq($from: tablet) {
+      padding-bottom: 3.25rem;
+      padding-top: 3.25rem;
+    }
   }
 
   &__menu {
@@ -31,11 +40,16 @@
     margin-bottom: 0;
     margin-top: 0;
     min-width: 100%;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
     padding-left: 0;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     position: absolute;
     top: 100%;
+
+    @include mq($from: tablet) {
+      padding-bottom: 2.5rem;
+      padding-top: 2.5rem;
+    }
 
     a {
       @include link();
@@ -66,7 +80,12 @@
 
   &__summary,
   &__menu {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @include mq($from: tablet) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
 }
