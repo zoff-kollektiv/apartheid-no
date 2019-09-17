@@ -33,6 +33,10 @@
       padding-bottom: 3.25rem;
       padding-top: 3.25rem;
     }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
 
   &__menu {
