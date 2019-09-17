@@ -1,5 +1,6 @@
 .next {
   color: $color-blue;
+  margin-bottom: -5rem;
   margin-top: 6rem;
 
   .excerpt {
@@ -26,9 +27,14 @@
       color: white;
     }
 
-    &::after {
+    &--next::after {
       content: '▸';
       margin-left: 1.5rem;
+    }
+
+    &--back::before {
+      content: '◂';
+      margin-right: 1.5rem;
     }
   }
 }
