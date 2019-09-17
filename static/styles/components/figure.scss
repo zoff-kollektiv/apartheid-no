@@ -36,7 +36,7 @@
   }
 
   > .video,
-  > img {
+  &__media {
     flex-grow: 1;
     height: auto;
     margin-bottom: 1.5rem;
@@ -50,7 +50,7 @@
   }
 
   &--is-reversed > .video,
-  &--is-reversed > img {
+  &--is-reversed > &__media {
     margin-right: 0;
 
     @include mq($from: tablet) {
@@ -59,7 +59,7 @@
   }
 
   &--is-columnized > .video,
-  &--is-columnized > img {
+  &--is-columnized > &__media {
     margin-bottom: 2.5rem;
     margin-right: 0;
   }

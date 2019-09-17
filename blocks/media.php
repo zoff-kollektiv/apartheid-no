@@ -18,7 +18,9 @@ $media_count = 1;
         <figure class="figure <?php if ($media_count % 2 == 0):
             echo 'figure--is-reversed';
         endif; ?>">
-          <?php echo wp_get_attachment_image($image_id, 'full'); ?>
+          <?php echo wp_get_attachment_image($image_id, 'media', null, [
+            'class' => 'figure__media'
+          ]); ?>
 
           <?php if ($image->post_title || $image->post_content || $image->post_excerpt) : ?>
             <figcaption class="figure__caption-container">

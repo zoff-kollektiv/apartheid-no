@@ -16,7 +16,7 @@
       else:
           echo 'columnized';
       endif; ?>">
-        <?php echo wp_get_attachment_image($poster_id, 'full'); ?>
+        <?php echo wp_get_attachment_image($poster_id, 'poster'); ?>
 
         <figcaption class="figure__caption-container">
           <?php if ($poster->post_title): ?>

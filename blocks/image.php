@@ -3,7 +3,7 @@
     <?php
     $image = get_field('image');
 
-    echo wp_get_attachment_image($image['ID'], 'full', [
+    echo wp_get_attachment_image($image['ID'], 'image', [
         'class' => 'figure__image'
     ]);
     ?>

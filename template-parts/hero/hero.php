@@ -8,7 +8,7 @@ if(is_front_page()) {
 ?>
 
 <section class="hero <?php echo $modifier; ?>">
-  <?php echo get_the_post_thumbnail(null, 'post-thumbnail', [
+  <?php echo get_the_post_thumbnail(null, 'hero', [
       'class' => 'hero__image'
   ]); ?>
 

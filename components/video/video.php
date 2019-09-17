@@ -1,5 +1,5 @@
 <a href="<?php echo $url; ?>" class="video">
-  <?php echo wp_get_attachment_image($image_id, 'full', null, [
+  <?php echo wp_get_attachment_image($image_id, 'media', null, [
       'class' => 'video__preview-image'
   ]); ?>
 
