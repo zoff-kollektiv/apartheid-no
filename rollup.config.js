@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-cpy';
 import postcss from 'rollup-plugin-postcss';
@@ -17,6 +18,10 @@ const CONFIG = {
       options: {
         verbose: true
       }
+    }),
+
+    babel({
+      exclude: 'node_modules/**'
     }),
 
     postcss({
