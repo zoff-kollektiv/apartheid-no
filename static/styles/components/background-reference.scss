@@ -12,6 +12,7 @@
   }
 
   &__label {
+    color: $color-blue;
     display: block;
     font-family: $font-value-family;
   }
@@ -27,5 +28,10 @@
     &:focus {
       color: $color-green;
     }
+  }
+
+  .title:hover,
+  .title:focus {
+    color: $color-red;
   }
 }
