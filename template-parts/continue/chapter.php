@@ -10,7 +10,9 @@ $summary = get_field('summary');
         <em class="excerpt excerpt--is-inverted"><?php echo $summary; ?></em>
       <?php endif; ?>
 
-      <a href="<?php echo get_the_permalink($next->ID); ?>" class="next__link next__link--next">
+      <a href="<?php echo get_the_permalink(
+          $next->ID
+      ); ?>" class="next__link next__link--next">
       <small class="next__link-label">Nächstes Kapitel lesen:</small>
       <?php echo $next->post_title; ?>
     </a>

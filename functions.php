@@ -202,6 +202,19 @@ function get_component($path, array $params = [])
     require get_template_directory() . '/components/' . $path . '.php';
 }
 
+function init_javascript()
+{
+    if (!is_admin()) {
+        wp_enqueue_script(
+            'main',
+            get_bloginfo('template_url') . '/dist/index.js',
+            [],
+            '1.0',
+            true
+        );
+    }
+}
+
 add_image_size('hero', 1280, 0, false);
 add_image_size('media', 700, 0, false);
 add_image_size('poster', 400, 0, false);
@@ -214,4 +227,5 @@ add_action('admin_menu', 'cleanup_admin');
 add_action('acf/init', 'acf_init_blocks');
 add_action('init', 'overwrite_core_blocks');
 add_filter('allowed_block_types', 'allowed_block_types');
+add_action('wp_enqueue_scripts', 'init_javascript');
 ?>
