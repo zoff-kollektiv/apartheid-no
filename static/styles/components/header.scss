@@ -11,6 +11,13 @@
     font-weight: 700;
     line-height: 1;
     text-decoration: none;
+
+    @at-root {
+      a#{&}:hover,
+      a#{&}:focus {
+        color: $color-red;
+      }
+    }
   }
 
   &__navigation-container {
