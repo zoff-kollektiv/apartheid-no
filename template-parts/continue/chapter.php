@@ -6,7 +6,7 @@ $summary = get_field('summary');
 <?php if ($next): ?>
   <section class="next full-bleed full-bleed--fill-red">
     <div class="constraint">
-      <?php if($summary): ?>
+      <?php if ($summary): ?>
         <em class="excerpt excerpt--is-inverted"><?php echo $summary; ?></em>
       <?php endif; ?>
 
