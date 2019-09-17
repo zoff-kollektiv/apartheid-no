@@ -1,10 +1,9 @@
 <?php
 $modifier = '';
 
-if(is_front_page()) {
-  $modifier = 'hero--is-centered';
+if (is_front_page()) {
+    $modifier = 'hero--is-centered';
 }
-
 ?>
 
 <section class="hero <?php echo $modifier; ?>">
@@ -14,12 +13,12 @@ if(is_front_page()) {
 
   <div class="constraint">
     <h1 class="hero__title">
-      <?php if(is_front_page()) : ?>
+      <?php if (is_front_page()): ?>
         <?php echo get_bloginfo('name'); ?>
         <p class="hero__chapter-subline">
           <?php echo get_bloginfo('description'); ?>
         </p>
-      <?php else : ?>
+      <?php else: ?>
         <small class="hero__chapter">Kapitel 1</small>
         <?php the_title(); ?>
       <?php endif; ?>

@@ -205,7 +205,7 @@ function get_component($path, array $params = [])
 add_image_size('hero', 1280, 0, false);
 add_image_size('media', 700, 0, false);
 add_image_size('poster', 400, 0, false);
-add_image_size('image', 850, 0 , false);
+add_image_size('image', 850, 0, false);
 
 add_theme_support('post-thumbnails');
 add_action('init', 'register_post_types');
