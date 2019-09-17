@@ -11,8 +11,6 @@
             get_template_part('template-parts/excerpt/excerpt', 'transparent');
             get_template_part('template-parts/content/content');
         }
-    } else {
-        get_template_part('template-parts/content/content', 'none');
     } ?>
   </main>
 

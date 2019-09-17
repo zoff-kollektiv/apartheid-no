@@ -7,10 +7,8 @@
     <?php if (have_posts()) {
         while (have_posts()) {
             the_post();
-            get_template_part('template-parts/hero/hero');
-            get_template_part('template-parts/excerpt/excerpt');
+            get_template_part('template-parts/title/title', 'page');
             get_template_part('template-parts/content/content');
-            get_template_part('template-parts/continue/chapter');
         }
     } ?>
   </main>
