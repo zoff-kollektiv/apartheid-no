@@ -1,6 +1,9 @@
 .navigation {
-  position: relative;
   z-index: 10;
+
+  @include mq($from: tablet) {
+    position: relative;
+  }
 
   @mixin link() {
     font-family: $font-value-family;
@@ -25,8 +28,8 @@
     @include link();
 
     display: block;
-    padding-bottom: 2.25rem;
-    padding-top: 2.25rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     user-select: none;
 
     @include mq($from: tablet) {
@@ -44,9 +47,9 @@
     margin-bottom: 0;
     margin-top: 0;
     min-width: 100%;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
     padding-left: 0;
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     position: absolute;
     top: 100%;
 
@@ -84,8 +87,8 @@
 
   &__summary,
   &__menu {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @include mq($from: tablet) {
       padding-left: 2.5rem;
