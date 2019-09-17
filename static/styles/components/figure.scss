@@ -67,6 +67,8 @@
   &--is-columnized > &__media {
     margin-bottom: 1rem;
     margin-right: 0;
+    max-width: 100%;
+    width: 100%;
 
     @include mq($from: tablet) {
       margin-bottom: 2.5rem;
@@ -74,9 +76,11 @@
   }
 
   &__title {
+    color: $color-blue;
     font-family: $font-value-family;
     font-size: 1.6rem;
     font-weight: 700;
+    hyphens: auto;
     line-height: 1.2;
     word-break: break-all;
 
@@ -86,6 +90,7 @@
   }
 
   &__description {
+    color: $color-blue;
     font-family: $font-value-family;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -97,6 +102,7 @@
   }
 
   &__caption {
+    color: $color-blue;
     display: block;
     font-family: $font-value-family;
     font-size: 1rem;

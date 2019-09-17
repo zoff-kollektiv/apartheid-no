@@ -8,4 +8,8 @@
   @include mq($from: tablet) {
     font-size: 2rem;
   }
+
+  p {
+    margin-top: 0;
+  }
 }
