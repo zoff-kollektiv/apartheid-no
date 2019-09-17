@@ -3,7 +3,7 @@ $image = get_field('image'); ?>
 
 <div class="constraint">
   <figure class="figure">
-    <?php echo wp_get_attachment_image($image['ID'], 'image', [
+    <?php echo wp_get_attachment_image($image['ID'], 'image', null, [
         'class' => 'figure__media'
     ]); ?>
 
