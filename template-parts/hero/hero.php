@@ -19,7 +19,7 @@ if (is_front_page()) {
           <?php echo get_bloginfo('description'); ?>
         </p>
       <?php else: ?>
-        <small class="hero__chapter">Kapitel 1</small>
+        <small class="hero__chapter">Kapitel <?php echo get_field('chapter_number'); ?></small>
         <?php the_title(); ?>
       <?php endif; ?>
     </h1>
