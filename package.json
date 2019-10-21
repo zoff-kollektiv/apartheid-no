@@ -21,6 +21,7 @@
   "homepage": "https://github.com/gustavpursche/apartheid-no#readme",
   "dependencies": {
     "domready": "^1.0.8",
+    "get-youtube-id": "^1.0.1",
     "sass-mq": "^5.0.1"
   },
   "devDependencies": {

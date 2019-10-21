@@ -39,6 +39,7 @@
     max-width: none;
   }
 
+  > .embed,
   > .video,
   &__media {
     flex-grow: 1;
@@ -54,6 +55,7 @@
     }
   }
 
+  &--is-reversed > .embed,
   &--is-reversed > .video,
   &--is-reversed > &__media {
     margin-right: 0;
@@ -63,6 +65,7 @@
     }
   }
 
+  &--is-columnized > .embed,
   &--is-columnized > .video,
   &--is-columnized > &__media {
     margin-bottom: 1rem;

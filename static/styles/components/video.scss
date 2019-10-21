@@ -5,6 +5,10 @@
   text-decoration: none;
   width: 100%;
 
+  &--is-active {
+    display: none;
+  }
+
   &__preview-image-container {
     background-color: rgb(40, 40, 40);
     font-size: 0;
