@@ -5,9 +5,21 @@
   text-decoration: none;
   width: 100%;
 
+  &__preview-image-container {
+    background-color: rgb(40, 40, 40);
+    font-size: 0;
+  }
+
   &__preview-image {
     height: auto;
+    opacity: 0.5;
+    transition: opacity 200ms ease-in-out;
     width: 100%;
+  }
+
+  &:hover &__preview-image,
+  &:focus &__preview-image {
+    opacity: 0.8;
   }
 
   &__play-icon {
@@ -61,6 +73,7 @@
     left: 0;
     padding: 1rem;
     position: absolute;
+    text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
     width: 100%;
 
     @include mq($from: tablet) {

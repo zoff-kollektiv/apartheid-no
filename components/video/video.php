@@ -1,7 +1,9 @@
 <a href="<?php echo $url; ?>" class="video">
-  <?php echo wp_get_attachment_image($image_id, 'media', null, [
-      'class' => 'video__preview-image'
-  ]); ?>
+  <div class="video__preview-image-container">
+    <?php echo wp_get_attachment_image($image_id, 'media', null, [
+        'class' => 'video__preview-image'
+    ]); ?>
+  </div>
 
   <div class="video__content">
     <span class="video__length">
