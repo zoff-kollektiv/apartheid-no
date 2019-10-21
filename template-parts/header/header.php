@@ -10,13 +10,14 @@
       <?php get_component('navigation/navigation', [
           'title' => 'Kapitel',
           'type' => 'chapters',
+          'is_active' => get_post_type() === 'chapters',
           'items' => array_map(
               function ($item) {
                   return $item->to_array();
               },
               get_posts([
                   'post_type' => 'chapters',
-                  'orderby'   => 'meta_value_num',
+                  'orderby' => 'meta_value_num',
                   'meta_key' => 'chapter_number',
                   'order' => 'ASC'
               ])
@@ -26,6 +27,7 @@
       <?php get_component('navigation/navigation', [
           'title' => 'Hintergründe',
           'type' => 'background',
+          'is_active' => get_post_type() === 'background',
           'items' => array_map(
               function ($item) {
                   return $item->to_array();
