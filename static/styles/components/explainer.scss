@@ -1,17 +1,23 @@
 .explainer {
   font-family: $font-value-family;
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+
+  @include mq($from: tablet) {
+    margin-bottom: 5rem;
+    margin-left: -10rem;
+    margin-top: 2.5rem;
+  }
 
   &__term {
     color: $color-green;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-style: normal;
     font-weight: 700;
     margin-right: 0.5rem;
 
     @include mq($from: tablet) {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
   }
 
