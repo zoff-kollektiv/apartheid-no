@@ -21,7 +21,7 @@
 
   &__caption-container {
     @include mq($from: tablet) {
-      max-width: 25%;
+      max-width: 35%;
     }
 
     > * + * {
