@@ -24,9 +24,11 @@ const initVideo = videoEl => {
   videoEl.addEventListener("click", event => {
     event.preventDefault();
 
-    const container = document.createElement("div");
+    const embed = document.createElement("div");
+    embed.classList.add("embed");
 
-    container.classList.add("embed");
+    const container = document.createElement("div");
+    container.classList.add("embed__container");
 
     const iframe = document.createElement("iframe");
 
@@ -40,8 +42,9 @@ const initVideo = videoEl => {
     iframe.setAttribute("allowfullscreen", "1");
 
     container.appendChild(iframe);
+    embed.appendChild(container);
 
-    videoEl.replaceWith(container);
+    videoEl.replaceWith(embed);
   });
 };
 
