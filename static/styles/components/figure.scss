@@ -82,7 +82,6 @@
     font-weight: 700;
     hyphens: auto;
     line-height: 1.2;
-    word-break: break-all;
 
     @include mq($from: tablet) {
       font-size: 2.4rem;
