@@ -1,4 +1,4 @@
-<?php if(has_excerpt()) : ?>
+<?php if (has_excerpt()): ?>
   <div class="full-bleed full-bleed--fill-blue full-bleed--with-margin-bottom">
     <div class="constraint">
       <em class="excerpt">

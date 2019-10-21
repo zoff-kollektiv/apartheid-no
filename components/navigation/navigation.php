@@ -20,7 +20,7 @@ if ($is_active) {
           <a href="<?php echo get_the_permalink($item['ID']); ?>">
             <?php if (
                 $chapter_number &&
-                $chapter_number !== 0 &&
+                $chapter_number !== '0' &&
                 $chapter_number !== '99'
             ): ?>
               <?php echo $chapter_number; ?>&nbsp;-&nbsp;

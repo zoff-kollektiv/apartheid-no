@@ -1,5 +1,6 @@
 <?php
 $modifier = '';
+$chapter_number = get_field('chapter_number');
 
 if (is_front_page()) {
     $modifier = 'hero--is-centered';
@@ -19,9 +20,13 @@ if (is_front_page()) {
           <?php echo get_bloginfo('description'); ?>
         </p>
       <?php else: ?>
-        <small class="hero__chapter">Kapitel <?php echo get_field(
-            'chapter_number'
-        ); ?></small>
+        <?php if (
+            $chapter_number &&
+            $chapter_number !== 0 &&
+            $chapter_number !== 99
+        ): ?>
+          <small class="hero__chapter">Kapitel <?php echo $chapter_number; ?></small>
+        <?php endif; ?>
         <?php the_title(); ?>
       <?php endif; ?>
     </h1>
