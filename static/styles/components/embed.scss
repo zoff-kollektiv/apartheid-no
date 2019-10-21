@@ -1,6 +1,10 @@
 .embed {
   width: 100%;
 
+  @media print {
+    display: none;
+  }
+
   &__container {
     height: 0;
     padding-bottom: 56.25%;

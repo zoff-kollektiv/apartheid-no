@@ -5,6 +5,10 @@
   color: white;
   position: relative;
 
+  @media print {
+    display: none;
+  }
+
   &__title {
     color: currentColor;
     font-family: $font-din-family;

@@ -12,6 +12,11 @@
     height: calc(100vh - 9rem);
   }
 
+  @media print {
+    background-color: transparent;
+    height: auto;
+  }
+
   &__image {
     height: 100%;
     left: 50%;
@@ -23,6 +28,10 @@
     transform: translate(-50%, -50%);
     width: auto;
     z-index: 1;
+
+    @media print {
+      display: none;
+    }
   }
 
   &__title {
@@ -34,6 +43,10 @@
     line-height: 1;
     position: relative;
     z-index: 2;
+
+    @media print {
+      color: $color-blue;
+    }
 
     @include mq($from: tablet) {
       font-size: 12rem;

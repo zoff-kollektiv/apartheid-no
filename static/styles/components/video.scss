@@ -5,6 +5,10 @@
   text-decoration: none;
   width: 100%;
 
+  @media print {
+    color: $color-blue;
+  }
+
   &--is-active {
     display: none;
   }
@@ -18,7 +22,12 @@
     height: auto;
     opacity: 0.5;
     transition: opacity 200ms ease-in-out;
+    object-fit: contain;
     width: 100%;
+
+    @media print {
+      opacity: 1;
+    }
   }
 
   &:hover &__preview-image,
@@ -82,6 +91,11 @@
 
     @include mq($from: tablet) {
       padding: 2.5rem;
+    }
+
+    @media print {
+      position: static;
+      text-shadow: none;
     }
   }
 }

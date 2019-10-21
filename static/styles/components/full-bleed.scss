@@ -19,21 +19,41 @@
   &--fill-blue {
     background-color: $color-blue;
     color: white;
+
+    @media print {
+      background-color: transparent;
+      color: $color-blue;
+    }
   }
 
   &--fill-red {
     background-color: $color-red;
     color: white;
+
+    @media print {
+      background-color: transparent;
+      color: $color-blue;
+    }
   }
 
   &--fill-yellow {
     background-color: $color-yellow;
     color: $color-blue;
+
+    @media print {
+      background-color: transparent;
+      color: $color-blue;
+    }
   }
 
   &--fill-green {
     background-color: $color-green;
     color: $color-blue;
+
+    @media print {
+      background-color: transparent;
+      color: $color-blue;
+    }
   }
 
   &--with-margin {

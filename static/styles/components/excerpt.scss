@@ -9,6 +9,10 @@
 
   &--is-inverted {
     color: white;
+
+    @media print {
+      color: $color-blue;
+    }
   }
 
   @include mq($from: tablet) {

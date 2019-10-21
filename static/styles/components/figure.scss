@@ -47,6 +47,7 @@
     margin-bottom: 1rem;
     max-width: 100%;
     object-fit: contain;
+    object-position: right top;
 
     @include mq($from: tablet) {
       margin-bottom: 0;
@@ -59,6 +60,7 @@
   &--is-reversed > .video,
   &--is-reversed > &__media {
     margin-right: 0;
+    object-position: left top;
 
     @include mq($from: tablet) {
       margin-left: 2.5rem;
@@ -71,10 +73,20 @@
     margin-bottom: 1rem;
     margin-right: 0;
     max-width: 100%;
+    object-position: left bottom;
     width: 100%;
 
     @include mq($from: tablet) {
       margin-bottom: 2.5rem;
+    }
+  }
+
+  &__media {
+    max-height: 80vh;
+
+    @media print {
+      max-height: 20rem;
+      object-position: left top;
     }
   }
 
