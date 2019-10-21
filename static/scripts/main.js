@@ -36,7 +36,7 @@ const initVideo = videoEl => {
       "src",
       `https://www.youtube-nocookie.com/embed/${getYouTubeID(
         videoEl.href
-      )}?autoplay=1`
+      )}?autoplay=1&modestbranding=1&showinfo=0&controls=0`
     );
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("allowfullscreen", "1");
