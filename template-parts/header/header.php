@@ -15,7 +15,10 @@
                   return $item->to_array();
               },
               get_posts([
-                  'post_type' => 'chapters'
+                  'post_type' => 'chapters',
+                  'orderby'   => 'meta_value_num',
+                  'meta_key' => 'chapter_number',
+                  'order' => 'ASC'
               ])
           )
       ]); ?>
