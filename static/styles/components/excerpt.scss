@@ -14,4 +14,17 @@
   @include mq($from: tablet) {
     font-size: 2.5rem;
   }
+
+  &__featured-image-caption {
+    display: block;
+    font-family: $font-value-family;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+
+    @include mq($from: tablet) {
+      font-size: 1.4rem;
+      margin-top: 3rem;
+    }
+  }
 }
