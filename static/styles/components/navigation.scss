@@ -42,7 +42,34 @@
     }
   }
 
+  &__summary-text {
+    color: white;
+    padding-bottom: 0.35rem;
+  }
+
+  &--is-active &__summary-text {
+    border-bottom: 0.35rem solid currentColor;
+
+    @include mq($from: tablet) {
+      border-bottom-width: 0.5rem;
+    }
+  }
+
+  &--is-active:not([open]).navigation--theme-chapters &__summary-text {
+    color: $color-red;
+  }
+
+  &--is-active:not([open]).navigation--theme-background &__summary-text {
+    color: $color-green;
+  }
+
+  &:hover &__summary-text,
+  &:focus &__summary-text {
+    color: white !important; // Future me: i am so sorry
+  }
+
   &__menu {
+    background-color: currentColor;
     list-style: none;
     margin-bottom: 0;
     margin-top: 0;
@@ -56,17 +83,17 @@
     @include mq($from: tablet) {
       padding-bottom: 2.5rem;
       padding-top: 2.5rem;
+      width: 35rem;
     }
 
     a {
       @include link();
 
-      color: currentColor;
+      color: white;
       display: block;
       padding-bottom: 1.5rem;
       padding-top: 1.5rem;
       text-decoration: none;
-      white-space: nowrap;
 
       &:hover,
       &:focus {
@@ -75,13 +102,29 @@
     }
   }
 
+  &--theme-chapters {
+    color: $color-red;
+
+    &:hover,
+    &:focus {
+      background-color: $color-red;
+    }
+  }
+
+  &--theme-background {
+    color: $color-green;
+
+    &:hover,
+    &:focus {
+      background-color: $color-green;
+    }
+  }
+
   &--theme-chapters &__menu {
-    background-color: $color-red;
     left: 0;
   }
 
   &--theme-background &__menu {
-    background-color: $color-green;
     right: 0;
   }
 
