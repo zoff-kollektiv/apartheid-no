@@ -1,6 +1,11 @@
 <?php
 $background_color = get_field('background_color');
 $media_count = 1;
+
+// Handle legacy media blocks
+if ($background_color === 'blue') {
+    $background_color = 'red';
+}
 ?>
 
 <?php if (have_rows('media')): ?>
