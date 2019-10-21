@@ -14,6 +14,11 @@
 
     a {
       color: currentColor;
+
+      &:hover,
+      &:focus {
+        color: $color-green;
+      }
     }
   }
 }
