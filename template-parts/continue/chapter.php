@@ -1,5 +1,13 @@
 <?php
-$next = get_next_post();
+$chapter_number = get_field('chapter_number');
+$next = get_posts([
+  'post_type' => 'chapters',
+  'meta_query' => [
+    'key' => 'chapter_number',
+    'value' => strval($chapter_number + 1)
+  ]
+]);
+
 $summary = get_field('summary');
 ?>
 
@@ -11,10 +19,10 @@ $summary = get_field('summary');
       <?php endif; ?>
 
       <a href="<?php echo get_the_permalink(
-          $next->ID
+          $next[0]->ID
       ); ?>" class="next__link next__link--next">
       <small class="next__link-label">Nächstes Kapitel lesen:</small>
-      <?php echo $next->post_title; ?>
+      <?php echo $next[0]->post_title; ?>
     </a>
     </div>
   </section>
