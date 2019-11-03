@@ -55,14 +55,6 @@
     }
   }
 
-  &--is-active:not([open]).navigation--theme-chapters &__summary-text {
-    color: $color-red;
-  }
-
-  &--is-active:not([open]).navigation--theme-background &__summary-text {
-    color: $color-green;
-  }
-
   &:hover &__summary-text,
   &:focus &__summary-text {
     color: white !important; // Future me: i am so sorry
