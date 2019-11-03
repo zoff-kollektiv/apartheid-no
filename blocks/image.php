@@ -1,9 +1,17 @@
 <?php
-$image = get_field('image'); ?>
+$image = get_field('image');
+$image_src = wp_get_attachment_image_src($image['ID'], 'image', false);
+$image_classname = '';
+
+// if image is landscape, add columnized class
+if ($image_src[1] > $image_src[2]) {
+  $image_classname = 'figure--is-columnized';
+}
+?>
 
 <div class="full-bleed full-bleed--with-margin">
   <div class="constraint">
-    <figure class="figure figure--is-columnized">
+    <figure class="figure <?php echo $image_classname; ?>">
       <?php echo wp_get_attachment_image($image['ID'], 'image', null, [
           'class' => 'figure__media'
       ]); ?>
