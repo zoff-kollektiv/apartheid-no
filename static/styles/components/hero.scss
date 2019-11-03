@@ -50,6 +50,7 @@
 
     @include mq($from: tablet) {
       font-size: 12rem;
+      hyphens: none;
     }
   }
 
