@@ -3,6 +3,11 @@
   font-family: $font-din-family;
   font-weight: 700;
 
+  // strong tags are used in some headlines, which are rendered too fat in FF
+  strong {
+    font-weight: 700;
+  }
+
   h2 {
     font-size: 3rem;
     line-height: 1;
