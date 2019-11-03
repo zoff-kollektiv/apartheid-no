@@ -92,14 +92,18 @@
 
   &__title {
     color: $color-blue;
+    display: block;
     font-family: $font-value-family;
     font-size: 1.6rem;
     font-weight: 700;
     hyphens: auto;
     line-height: 1.2;
+    margin-bottom: 1rem;
 
     @include mq($from: tablet) {
-      font-size: 2.4rem;
+      font-size: 2rem;
+      hyphens: none;
+      margin-bottom: 1.5rem;
     }
   }
 
