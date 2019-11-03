@@ -1,10 +1,12 @@
 <?php
-$chapter_number = get_field('chapter_number');
+$chapter_number = intval(get_field('chapter_number'));
 $next = get_posts([
   'post_type' => 'chapters',
   'meta_query' => [
-    'key' => 'chapter_number',
-    'value' => strval($chapter_number + 1)
+    [
+      'key' => 'chapter_number',
+      'value' => $chapter_number + 1
+    ]
   ]
 ]);
 
@@ -14,6 +16,7 @@ $summary = get_field('summary');
 <?php if ($next): ?>
   <section class="next full-bleed full-bleed--fill-red">
     <div class="constraint">
+
       <?php if ($summary): ?>
         <em class="excerpt excerpt--is-inverted"><?php echo $summary; ?></em>
       <?php endif; ?>
