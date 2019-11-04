@@ -16,6 +16,7 @@
                   return $item->to_array();
               },
               get_posts([
+                  'numberposts' => -1,
                   'post_type' => 'chapters',
                   'orderby' => 'meta_value_num',
                   'meta_key' => 'chapter_number',
@@ -33,6 +34,7 @@
                   return $item->to_array();
               },
               get_posts([
+                  'numberposts' => -1,
                   'post_type' => 'background'
               ])
           )
