@@ -27,6 +27,8 @@
     width: 100%;
 
     @media print {
+      max-height: 15rem !important;
+      object-fit: none;
       opacity: 1;
     }
   }
