@@ -3,10 +3,6 @@
   margin-bottom: -5rem;
   margin-top: 6rem;
 
-  @media print {
-    display: none;
-  }
-
   .excerpt {
     margin-bottom: 6rem;
   }
@@ -32,6 +28,10 @@
 
     @include mq($from: tablet) {
       font-size: 7.5rem;
+    }
+
+    @media print {
+      display: none;
     }
 
     &:hover,

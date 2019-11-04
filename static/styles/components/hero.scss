@@ -46,6 +46,8 @@
 
     @media print {
       color: $color-blue;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
     }
 
     @include mq($from: tablet) {

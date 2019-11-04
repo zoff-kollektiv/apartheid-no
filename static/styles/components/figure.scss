@@ -9,6 +9,10 @@
     flex-direction: row;
   }
 
+  @media print {
+    page-break-inside: avoid;
+  }
+
   &--is-reversed {
     @include mq($from: tablet) {
       flex-direction: row-reverse;
