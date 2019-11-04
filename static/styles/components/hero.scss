@@ -30,7 +30,12 @@
     z-index: 1;
 
     @media print {
-      display: none;
+      height: auto;
+      mix-blend-mode: normal;
+      object-fit: none;
+      position: static;
+      transform: none;
+      width: 100%;
     }
   }
 

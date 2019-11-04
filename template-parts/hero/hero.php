@@ -8,10 +8,6 @@ if (is_front_page()) {
 ?>
 
 <section class="hero <?php echo $modifier; ?>">
-  <?php echo get_the_post_thumbnail(null, 'hero', [
-      'class' => 'hero__image'
-  ]); ?>
-
   <div class="constraint">
     <h1 class="hero__title">
       <?php if (is_front_page()): ?>
@@ -31,4 +27,8 @@ if (is_front_page()) {
       <?php endif; ?>
     </h1>
   </div>
+
+  <?php echo get_the_post_thumbnail(null, 'hero', [
+      'class' => 'hero__image'
+  ]); ?>
 </section>
