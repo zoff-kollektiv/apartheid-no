@@ -75,6 +75,10 @@
     @include mq($from: tablet) {
       margin-left: 2.5rem;
     }
+
+    @media print {
+      margin-left: 0;
+    }
   }
 
   &--is-columnized > .embed,
