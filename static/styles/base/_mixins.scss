@@ -7,4 +7,8 @@
   } @else {
     justify-items: center;
   }
+
+  @media print {
+    display: block;
+  }
 }
