@@ -109,6 +109,7 @@
     }
 
     @media print {
+      padding-left: 0 !important;
       position: static;
       text-shadow: none;
     }
