@@ -17,6 +17,10 @@
   &__preview-image-container {
     background-color: rgb(40, 40, 40);
     font-size: 0;
+
+    @media print {
+      background-color: transparent;
+    }
   }
 
   &__preview-image {
@@ -28,7 +32,7 @@
 
     @media print {
       max-height: 15rem !important;
-      object-fit: none;
+      object-position: left top !important;
       opacity: 1;
     }
   }
