@@ -85,6 +85,11 @@
       font-size: 3rem;
       margin-left: 2.5rem;
     }
+
+    @media print {
+      font-size: 2rem;
+      margin-left: 0;
+    }
   }
 
   &__content {

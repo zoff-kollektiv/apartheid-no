@@ -89,7 +89,7 @@
     max-height: 90vh;
 
     @media print {
-      max-height: 20rem;
+      max-height: 25rem !important;
       object-position: left top;
     }
   }
