@@ -1,10 +1,8 @@
 <?php
 
 if (!$url) {
-  $url = '#';
-}
-
-?>
+    $url = '#';
+} ?>
 
 <a href="<?php echo $url; ?>" class="video js-video">
   <div class="video__preview-image-container">

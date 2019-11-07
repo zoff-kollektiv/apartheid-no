@@ -31,12 +31,11 @@ const initVideo = videoEl => {
     container.classList.add("embed__container");
 
     const iframe = document.createElement("iframe");
+    const { id: videoId } = getVideoId(videoEl.href);
 
     iframe.setAttribute(
       "src",
-      `https://player.vimeo.com/video/${getVideoId(
-        videoEl.href
-      )}?autoplay=1&modestbranding=1&showinfo=0&controls=0`
+      `https://player.vimeo.com/video/${videoId}?autoplay=1&modestbranding=1&showinfo=0&controls=0`
     );
 
     iframe.setAttribute("allow", "autoplay; fullscreen");
