@@ -194,6 +194,16 @@ function overwrite_core_blocks()
         </div>';
         }
     ));
+
+    register_block_type('core/list', array(
+        'render_callback' => function ($attributes, $content) {
+            return '<div class="constraint">
+          <div class="list">' .
+                $content .
+                '</div>
+        </div>';
+        }
+    ));
 }
 
 function get_component($path, array $params = [])
