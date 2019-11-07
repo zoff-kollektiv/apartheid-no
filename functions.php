@@ -114,7 +114,7 @@ function allowed_block_types($allowed_blocks)
         return "acf/{$block['name']}";
     }, $BLOCKS);
 
-    $allowed_core_blocks = ['core/heading', 'core/paragraph'];
+    $allowed_core_blocks = ['core/heading', 'core/paragraph', 'core/list'];
 
     return array_merge($acf_blocks, $allowed_core_blocks);
 }
