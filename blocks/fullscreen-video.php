@@ -9,6 +9,6 @@ $description = get_field('description');
         'image_id' => get_field('preview_image'),
         'quote' => get_field('quote'),
         'length' => get_field('length'),
-        'url' => get_field('youtube_url')
+        'url' => get_field('vimeo_url')
     ]); ?>
 </div>
