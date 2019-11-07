@@ -1,5 +1,5 @@
 import domready from "domready";
-import getYouTubeID from "get-youtube-id";
+import getVideoId from "get-video-id";
 
 const closeOtherNavigations = (current, navigations) => {
   navigations.forEach(navigation => {
@@ -31,13 +31,14 @@ const initVideo = videoEl => {
     container.classList.add("embed__container");
 
     const iframe = document.createElement("iframe");
+    const { id: videoId } = getVideoId(videoEl.href);
 
     iframe.setAttribute(
       "src",
-      `https://www.youtube-nocookie.com/embed/${getYouTubeID(
-        videoEl.href
-      )}?autoplay=1&modestbranding=1&showinfo=0&controls=0`
+      `https://player.vimeo.com/video/${videoId}?autoplay=1`
     );
+
+    iframe.setAttribute("allow", "autoplay; fullscreen");
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("allowfullscreen", "1");
 

@@ -1,3 +1,9 @@
+<?php
+
+if (!$url) {
+    $url = '#';
+} ?>
+
 <a href="<?php echo $url; ?>" class="video js-video">
   <div class="video__preview-image-container">
     <?php echo wp_get_attachment_image($image_id, 'media', null, [

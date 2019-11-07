@@ -56,13 +56,13 @@
     margin-bottom: 1rem;
     max-width: 100%;
     object-fit: contain;
-    object-position: right top;
+    object-position: left top;
 
     @include mq($from: tablet) {
       margin-bottom: 0;
       margin-right: 2.5rem;
       max-width: 75%;
-      object-position: left top !important;
+      object-position: right top;
     }
   }
 

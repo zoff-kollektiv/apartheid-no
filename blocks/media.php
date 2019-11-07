@@ -72,7 +72,7 @@ if ($background_color === 'blue') {
                 'image_id' => get_sub_field('preview_image'),
                 'quote' => get_sub_field('quote'),
                 'length' => get_sub_field('length'),
-                'url' => get_sub_field('youtube_url')
+                'url' => get_sub_field('vimeo_url')
             ]);
             ?>
 

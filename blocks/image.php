@@ -5,7 +5,7 @@ $image_classname = '';
 
 // if image is landscape, add columnized class
 if ($image_src[1] > $image_src[2]) {
-  $image_classname = 'figure--is-columnized';
+    $image_classname = 'figure--is-columnized';
 }
 ?>
 

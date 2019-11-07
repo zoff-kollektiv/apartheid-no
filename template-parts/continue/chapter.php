@@ -1,13 +1,13 @@
 <?php
 $chapter_number = intval(get_field('chapter_number'));
 $next = get_posts([
-  'post_type' => 'chapters',
-  'meta_query' => [
-    [
-      'key' => 'chapter_number',
-      'value' => $chapter_number + 1
+    'post_type' => 'chapters',
+    'meta_query' => [
+        [
+            'key' => 'chapter_number',
+            'value' => $chapter_number + 1
+        ]
     ]
-  ]
 ]);
 
 $summary = get_field('summary');
