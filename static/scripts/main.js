@@ -35,7 +35,7 @@ const initVideo = videoEl => {
 
     iframe.setAttribute(
       "src",
-      `https://player.vimeo.com/video/${videoId}?autoplay=1`
+      `https://player.vimeo.com/video/${videoId}?autoplay=1&texttrack=de`
     );
 
     iframe.setAttribute("allow", "autoplay; fullscreen");
