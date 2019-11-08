@@ -25,7 +25,8 @@ if ($background_color === 'blue') {
               echo 'figure--is-reversed';
           endif; ?>">
             <?php echo wp_get_attachment_image($image_id, 'media', null, [
-                'class' => 'figure__media'
+                'class' => 'figure__media',
+                'loading' => 'lazy'
             ]); ?>
 
             <?php if (

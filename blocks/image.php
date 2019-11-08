@@ -13,7 +13,8 @@ if ($image_src[1] > $image_src[2]) {
   <div class="constraint">
     <figure class="figure <?php echo $image_classname; ?>">
       <?php echo wp_get_attachment_image($image['ID'], 'image', null, [
-          'class' => 'figure__media'
+          'class' => 'figure__media',
+          'loading' => 'lazy'
       ]); ?>
 
       <figcaption class="figure__caption-container">

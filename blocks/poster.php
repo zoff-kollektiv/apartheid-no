@@ -18,7 +18,8 @@
             echo 'columnized';
         endif; ?>">
           <?php echo wp_get_attachment_image($poster_id, 'poster', null, [
-              'class' => 'figure__media'
+              'class' => 'figure__media',
+              'loading' => 'lazy'
           ]); ?>
 
           <figcaption class="figure__caption-container">
